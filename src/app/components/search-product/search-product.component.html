@@ -1,0 +1,20 @@
+<h2>Search a product:</h2>
+<br>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <input
+    class="form-control"
+    type="text"
+    formControlName="name"
+    placeholder="Product name"
+    required
+    />
+    <p *ngIf="invalidProduct" style="color: brown;">
+        No product corresponding
+        <br>
+        <b>Warning: the research is case sensitive</b>
+    </p>
+    <br>
+    <button type="submit" class="submit">
+        SEARCH
+    </button>
+  </form>

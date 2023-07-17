@@ -1,0 +1,8 @@
+<div class="product-display">
+    <h2>{{ product.name | titlecase }}</h2>
+    <br>
+    <p><b>Price: </b>{{ product.price | currency }}</p>
+    <p><b>Quantity: </b>{{ product.quantity }}</p>
+    <button class="btn btn-sm btn-primary" routerLink="/edit-product/{{ product._id }}">Edit</button>
+    <button class="btn btn-sm btn-danger" (click)="delete(product._id)" onclick="window.location.href='http://localhost:4200/products-list'">Delete</button>
+</div>
